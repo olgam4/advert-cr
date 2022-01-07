@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.title {
+  user-select: none;
+  height: 140px;
+  animation: sin infinite 4s ease-in-out;
+}
+
+@keyframes sin {
+  0%, 100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.planetA {
+  margin-top: -100px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.planetB {
+  margin-top: -150px;
+  margin-left: -400px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.planetC {
+  margin-top: -450px;
+  margin-right: -400px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.header {
+  background-color: #282c34;
+  background: url('./assets/bg1.png') no-repeat center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.link {
+  transition: all 0.2s;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}
+
+.gplay {
+  height: 50px
+}
+
+.main {
+  background: url('./assets/bg2.png') no-repeat center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.advert {
+  position: relative;
+}
+
+.phone {
+  height: 620px;
+  width: 340px;
+  pointer-events: none;
+  position: absolute;
+  right: -20px;
+  bottom: -10px;
+}
+
+.video {
+  height: 590px;
+  width: 300px;
+  background-color: #000;
+}
+
+.catchphrase {
+  padding: 50px;
+  max-width: 400px;
+  background-color: #020026;
+  position: relative;
+}
+
+.astro {
+  position: absolute;
+  width: 100px;
+  top: -40px;
+  right: -40px;
+}
+
+p {
+  font-size: calc(20px + 2vmin);
+  font-family: 'Staatliches', cursive;
+  color: #9CDBFF;
+  font-weight: bold;
+}
