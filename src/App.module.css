@@ -4,6 +4,26 @@
   text-align: center;
 }
 
+.header {
+  background-color: #282c34;
+  background: url('./assets/bg1.png') no-repeat center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: relative;
+}
+
+.link {
+  transition: all 0.2s;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}
 .title {
   user-select: none;
   height: 140px;
@@ -19,48 +39,78 @@
   }
 }
 
-.planetA {
-  margin-top: -100px;
+.galaxy {
+  position: relative;
+  height: 60vh;
+  width: 100vw;
+  max-width: 1920px;
+  z-index: 0;
+}
+
+.planetA, .planetB, .planetC {
   pointer-events: none;
   user-select: none;
+  position: absolute;
+}
+
+.planetA {
+  left: calc(50% - 150px);
 }
 
 .planetB {
-  margin-top: -150px;
-  margin-left: -400px;
-  pointer-events: none;
-  user-select: none;
+  left: 25%;
+  bottom: 10vh;
 }
 
 .planetC {
-  margin-top: -450px;
-  margin-right: -400px;
+  left: 55%;
+  bottom: 25vh;
+}
+
+.runner {
   pointer-events: none;
   user-select: none;
+  position: absolute;
+  bottom: -28px;
+  animation: run 2.5s linear infinite;
+  z-index: 1;
 }
 
-.header {
-  background-color: #282c34;
-  background: url('./assets/bg1.png') no-repeat center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.link {
-  transition: all 0.2s;
-}
-
-.link:hover {
-  transform: scale(1.1);
+@keyframes run {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 .gplay {
-  height: 50px
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    height: 80px;
+  }
+
+  .planetA {
+    top: calc(50% - 150px);
+  }
+
+  .planetB, .planetC {
+    display: none;
+  }
+
+  .runner {
+    animation: none;
+    top: calc(50% - 216px);
+    height: 100px;
+  }
+
+  .header {
+    height: 100vh;
+  }
 }
 
 .main {
@@ -90,6 +140,11 @@
   background-color: #000;
 }
 
+.gameplayStill {
+  height: 590px;
+  width: 300px;
+}
+
 .catchphrase {
   padding: 50px;
   max-width: 400px;
@@ -109,4 +164,32 @@ p {
   font-family: 'Staatliches', cursive;
   color: #9CDBFF;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .main {
+    position: relative;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-top: 15px solid #020026;
+  }
+
+  .video {
+    width: 100vw;
+    object-fit: cover;
+  }
+
+  .catchphrase {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .phone {
+    display: none;
+  }
+
+  .astro {
+    display: none;
+  }
 }
