@@ -20,7 +20,9 @@ const App: Component = () => {
   return (
     <div class={styles.App}>
       <header class={styles.header}>
-        <img src={title} class={styles.title} alt="logo" />
+        <div class={styles.imageContainer}>
+          <img src={title} class={styles.title} alt="logo" />
+        </div>
         <div class={styles.galaxy}>
           <img src={planetA} class={styles.planetA} alt="earth" />
           <img src={planetB} class={styles.planetB} alt="planet" />

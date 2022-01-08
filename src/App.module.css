@@ -91,7 +91,9 @@
 
 @media (max-width: 768px) {
   .title {
-    height: 80px;
+    height: 150px;
+    width: 100vw;
+    height: auto;
   }
 
   .planetA {
